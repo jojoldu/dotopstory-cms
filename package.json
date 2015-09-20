@@ -1,0 +1,27 @@
+{
+  "name": "dotopstory-cms",
+  "version": "0.0.0",
+  "description": "dotop story cms",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jojoldu/dotopstory-cms.git"
+  },
+  "author": "jojoldu@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jojoldu/dotopstory-cms/issues"
+  },
+  "homepage": "https://github.com/jojoldu/dotopstory-cms",
+  "dependencies": {
+    "express": "4.1.2",
+    "jade": "1.3.1",
+    "mongoskin": "1.4.1",
+    "stylus": "0.44.0",
+    "body-parser": "1.14.0"
+  }
+}
