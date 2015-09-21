@@ -1,0 +1,27 @@
+{
+  "name": "dotopstory-cms",
+  "version": "0.0.0",
+  "homepage": "https://github.com/jojoldu/dotopstory-cms",
+  "authors": [
+    "jojoldu@gmail.com"
+  ],
+  "description": "dotop story cms",
+  "main": "app.js",
+  "keywords": [
+    "handlebars",
+    "angular",
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "handlebars": "~4.0.2",
+    "underscore": "~1.8.3"
+  }
+}
