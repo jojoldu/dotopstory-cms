@@ -2,14 +2,17 @@ var express = require('express'),
 	http = require('http'),
 	path = require('path');
 
+var expressHbs = require('express-handlebars');
+
 var app = express();
 
+app.engine('hbs', expressHbs({extname:'hbs', defaultLayout:'index.hbs'}));
+
 app.set('port', process.env.PORT || 3000);
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'html');
+app.set('view engine', 'hbs');
 
 app.all('*', function(req, res){
-	res.render('index', {msg: 'Welcome to the Practical Node.js'});
+	res.render('/layouts/index', {msg: 'Welcome to the Practical Node.js'});
 });
 
 http
