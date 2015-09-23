@@ -6,13 +6,15 @@ var expressHbs = require('express-handlebars');
 
 var app = express();
 
-app.engine('hbs', expressHbs({extname:'hbs', defaultLayout:'index.hbs'}));
+app.engine('handlebars', expressHbs({defaultLayout:'main'}));
 
 app.set('port', process.env.PORT || 3000);
-app.set('view engine', 'hbs');
+app.set('view engine', 'handlebars');
 
-app.all('*', function(req, res){
-	res.render('/layouts/index', {msg: 'Welcome to the Practical Node.js'});
+app.use(express.static(path.join(__dirname, '')));
+
+app.get('/', function(req, res){
+	res.render('index', {msg: 'Welcome to the Practical Node.js'});
 });
 
 http
