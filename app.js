@@ -14,7 +14,11 @@ app.set('view engine', 'handlebars');
 app.use(express.static(path.join(__dirname, '')));
 
 app.get('/', function(req, res){
-	res.render('index', {msg: 'Welcome to the Practical Node.js'});
+	res.render('index');
+});
+
+app.get('/hero', function(req, res){
+	res.render('hero');
 });
 
 http
